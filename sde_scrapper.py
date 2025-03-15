@@ -295,13 +295,14 @@ def streamlit_app():
 def schedule_job():
     """Set up the schedule for the scraper."""
     config = get_env_config()
-    schedule.every().day.at(config["notification_time"]).do(check_and_notify)
+    notification_time = "11:23"
     
-    logger.info(f"Scheduled daily check at {config['notification_time']}")
+    logger.info(f"Scheduled daily check at {notification_time}")
+    schedule.every().day.at(notification_time).do(check_and_notify)
     
     while True:
         schedule.run_pending()
-        time.sleep(10)  # Check every minute
+        time.sleep(10)  # Check every 10 seconds
 
 if __name__ == "__main__":
     import sys
