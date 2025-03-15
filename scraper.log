@@ -1,0 +1,131 @@
+2025-03-15 20:19:28,780 - __main__ - INFO - Starting scraper service
+2025-03-15 20:19:28,782 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 20:19:28,782 - __main__ - INFO - Scheduled daily check at 08:00
+2025-03-15 20:31:52,747 - __main__ - INFO - Starting scraper service
+2025-03-15 20:31:52,748 - __main__ - INFO - Scheduled daily check at 08:00
+2025-03-15 20:32:27,895 - __main__ - INFO - Starting scraper service
+2025-03-15 20:32:27,896 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 20:32:27,897 - __main__ - INFO - Scheduled daily check at 08:00
+2025-03-15 20:34:58,629 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:34:59,049 - __main__ - INFO - Starting scraper service
+2025-03-15 20:34:59,050 - __main__ - INFO - Scheduled daily check at 08:00
+2025-03-15 20:37:47,747 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:37:47,747 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:37:56,904 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:37:57,318 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 20:37:57,320 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:37:57,760 - __main__ - WARNING - No data scraped. Check website structure or network connection.
+2025-03-15 20:39:03,532 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:39:03,975 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 20:39:03,976 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:39:04,353 - __main__ - WARNING - No data scraped. Check website structure or network connection.
+2025-03-15 20:50:16,710 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:50:18,775 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 20:50:18,776 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:50:20,855 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 20:50:20,862 - __main__ - INFO - Found and notified about 33 new news items and 0 new events
+2025-03-15 20:53:44,324 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:53:45,963 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 20:53:45,965 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:53:47,738 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 20:53:47,746 - __main__ - INFO - Found and notified about 3 new news items and 0 new events
+2025-03-15 20:58:56,633 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:58:59,113 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 20:58:59,113 - __main__ - INFO - Starting scraping process...
+2025-03-15 20:59:00,633 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 20:59:00,635 - __main__ - INFO - Found and notified about 33 new news items and 0 new events
+2025-03-15 21:00:37,163 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:00:38,700 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:00:38,702 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:00:40,185 - __main__ - INFO - No new updates found
+2025-03-15 21:17:24,639 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:17:26,316 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:17:26,319 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:18:36,295 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:18:37,898 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:18:37,901 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:18:39,193 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 21:18:39,198 - __main__ - INFO - Found and notified about 19 new news items and 0 new events
+2025-03-15 21:21:00,043 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:21:05,306 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:21:06,994 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:21:06,996 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:21:08,641 - __main__ - INFO - No new updates found
+2025-03-15 21:26:18,218 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:26:18,221 - __main__ - INFO - Scheduled daily check at 21:26
+2025-03-15 21:28:29,398 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:28:29,418 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:28:29,420 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:28:29,421 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:28:29,816 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:28:29,829 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:28:29,835 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:28:29,838 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:28:30,828 - __main__ - INFO - No new updates found
+2025-03-15 21:28:31,345 - __main__ - INFO - No new updates found
+2025-03-15 21:28:39,084 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:28:39,103 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:28:39,108 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:28:39,110 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:28:40,666 - __main__ - INFO - No new updates found
+2025-03-15 21:28:40,683 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:28:40,687 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:28:40,691 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:28:42,349 - __main__ - INFO - No new updates found
+2025-03-15 21:29:38,976 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:29:38,978 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:29:38,979 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:29:40,539 - __main__ - INFO - No new updates found
+2025-03-15 21:31:10,261 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:31:10,263 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:31:10,264 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:31:12,052 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 21:31:12,056 - __main__ - INFO - Found and notified about 0 new news items
+2025-03-15 21:35:16,101 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:35:16,102 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:35:16,103 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:35:22,221 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7933065437:AAEXHryKASz_2zBkqLXmbjzvCZDdOwTT7UI/sendMessage "HTTP/1.1 400 Bad Request"
+2025-03-15 21:35:22,223 - __main__ - ERROR - Error sending Telegram message: Chat not found
+2025-03-15 21:35:22,230 - __main__ - WARNING - Failed to send notification, will try again next time
+2025-03-15 21:37:30,342 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:37:30,343 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:37:30,346 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:37:33,293 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botAAEXHryKASz_2zBkqLXmbjzvCZDdOwTT7UI/sendMessage "HTTP/1.1 404 Not Found"
+2025-03-15 21:37:33,295 - __main__ - ERROR - Error sending Telegram message: Not Found
+2025-03-15 21:37:33,299 - __main__ - WARNING - Failed to send notification, will try again next time
+2025-03-15 21:42:31,537 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:42:31,538 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:42:31,539 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:42:34,051 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7933065437:AAEXHryKASz_2zBkqLXmbjzvCZDdOwTT7UI/sendMessage "HTTP/1.1 200 OK"
+2025-03-15 21:42:34,053 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 21:42:34,059 - __main__ - INFO - Found and notified about 0 new news items
+2025-03-15 21:43:23,387 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:43:23,390 - __main__ - INFO - Created default config file. Please update config.json with your credentials.
+2025-03-15 21:43:23,391 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:43:25,842 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7933065437:AAEXHryKASz_2zBkqLXmbjzvCZDdOwTT7UI/sendMessage "HTTP/1.1 200 OK"
+2025-03-15 21:43:25,844 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 21:43:25,850 - __main__ - INFO - Found and notified about 0 new news items
+2025-03-15 21:49:54,249 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:49:54,251 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:49:56,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7933065437:AAEXHryKASz_2zBkqLXmbjzvCZDdOwTT7UI/sendMessage "HTTP/1.1 200 OK"
+2025-03-15 21:49:56,835 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 21:49:56,841 - __main__ - INFO - Found and notified about 0 new news items
+2025-03-15 21:54:31,048 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:54:31,052 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:54:32,672 - __main__ - INFO - No new updates found
+2025-03-15 21:55:28,707 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:55:28,709 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:55:30,287 - __main__ - INFO - No new updates found
+2025-03-15 21:56:43,449 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 21:56:43,451 - __main__ - INFO - Starting scraping process...
+2025-03-15 21:56:46,031 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7933065437:AAEXHryKASz_2zBkqLXmbjzvCZDdOwTT7UI/sendMessage "HTTP/1.1 200 OK"
+2025-03-15 21:56:46,032 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 21:56:46,037 - __main__ - INFO - Found and notified about 0 new news items
+2025-03-15 21:59:13,909 - __main__ - INFO - Scheduled daily check at 22:00
+2025-03-15 22:00:13,920 - __main__ - INFO - Running scheduled check for updates
+2025-03-15 22:00:13,924 - __main__ - INFO - Starting scraping process...
+2025-03-15 22:00:16,568 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7933065437:AAEXHryKASz_2zBkqLXmbjzvCZDdOwTT7UI/sendMessage "HTTP/1.1 200 OK"
+2025-03-15 22:00:16,570 - __main__ - INFO - Telegram message sent successfully
+2025-03-15 22:00:16,577 - __main__ - INFO - Found and notified about 0 new news items
+2025-03-15 22:03:51,992 - __main__ - INFO - Scheduled daily check at 08:00
+2025-03-15 22:14:26,751 - __main__ - INFO - Scheduled daily check at 08:00
