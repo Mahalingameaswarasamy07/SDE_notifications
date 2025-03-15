@@ -50,16 +50,38 @@ def get_env_config():
     return config
 
 def load_previous_data():
-    """Load previously scraped data from file."""
-    if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r') as f:
-            return json.load(f)
-    return {"news": []}
+    """Load previously scraped data from file with enhanced cloud compatibility."""
+    try:
+        # For Streamlit Cloud, use a known accessible directory
+        if os.environ.get('STREAMLIT_SHARING_MODE') == 'streamlit':
+            # Use Streamlit's cache directory for persistence
+            file_path = os.path.join('/tmp', DATA_FILE)
+        else:
+            file_path = DATA_FILE
+            
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as f:
+                return json.load(f)
+        
+        return {"news": []}
+    except Exception as e:
+        logger.error(f"Error loading previous data: {str(e)}")
+        return {"news": []}
 
 def save_data(data):
-    """Save scraped data to file."""
-    with open(DATA_FILE, 'w') as f:
-        json.dump(data, f, indent=4)
+    """Save scraped data to file with cloud environment handling."""
+    try:
+        # Use the same path resolution logic as in load_previous_data
+        if os.environ.get('STREAMLIT_SHARING_MODE') == 'streamlit':
+            file_path = os.path.join('/tmp', DATA_FILE)
+        else:
+            file_path = DATA_FILE
+            
+        with open(file_path, 'w') as f:
+            json.dump(data, f, indent=4)
+        logger.info(f"Data saved successfully to {file_path}")
+    except Exception as e:
+        logger.error(f"Error saving data: {str(e)}")
 
 def scrape_website():
     """Scrape news titles from the SDE BU website."""
