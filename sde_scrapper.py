@@ -279,16 +279,15 @@ def schedule_job():
     
     while True:
         schedule.run_pending()
-        time.sleep(60)  # Check every minute
+        time.sleep(10)  # Check every minute
 
 if __name__ == "__main__":
     import sys
     
-    # if len(sys.argv) > 1 and sys.argv[1] == "streamlit":
+    if len(sys.argv) > 1 and sys.argv[1] == "streamlit":
         # This path is used when run via streamlit
-    # streamlit_app()
-    # check_and_notify()
-    # else:
-    #     # This path is used when run as a standalone script
-    #     logger.info("Starting scraper service")
-    schedule_job()
+        streamlit_app()
+    else:
+        # This path is used when run as a standalone script
+        logger.info("Starting scraper service")
+        schedule_job()
