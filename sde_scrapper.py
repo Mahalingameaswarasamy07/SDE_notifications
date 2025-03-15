@@ -9,6 +9,8 @@ import logging
 from telegram import Bot
 import pandas as pd
 from dotenv import load_dotenv
+import threading
+import streamlit as st
 
 # Load environment variables from .env file
 load_dotenv()
@@ -209,13 +211,6 @@ def check_and_notify():
         logger.info(f"Found and notified about {len(new_items['news'])} new news items")
     else:
         logger.warning("Failed to send notification, will try again next time")
-    # else:
-    #     logger.info("No new updates found")
-        
-        # Optionally send a notification with just existing news
-        # Uncomment the following lines if you want to send a notification even when there are no new items
-        # message = format_message(new_items, previous_data)
-        # send_telegram_message(message, config)
 
 def update_env_variable(key, value):
     """Update a single environment variable in the .env file."""
@@ -245,11 +240,67 @@ def update_env_variable(key, value):
     # Reload environment variables
     load_dotenv(override=True)
 
-def streamlit_app():
-    """Function to run in Streamlit."""
-    import streamlit as st
+# Global variable to track if scheduler is running
+scheduler_running = False
+scheduler_thread = None
+
+def run_scheduler():
+    """Function to run in the scheduler thread."""
+    global scheduler_running
     
+    config = get_env_config()
+    notification_time = config["notification_time"]
+    
+    logger.info(f"Scheduler thread started, checking for tasks at {notification_time}")
+    
+    schedule.clear()  # Clear any existing scheduled tasks
+    schedule.every().day.at(notification_time).do(check_and_notify)
+    
+    # Immediately run a check
+    check_and_notify()
+    
+    while scheduler_running:
+        schedule.run_pending()
+        time.sleep(10)  # Check every 10 seconds
+    
+    logger.info("Scheduler thread stopped")
+
+def start_scheduler():
+    """Start the scheduler in a separate thread."""
+    global scheduler_running, scheduler_thread
+    
+    if not scheduler_running:
+        scheduler_running = True
+        scheduler_thread = threading.Thread(target=run_scheduler)
+        scheduler_thread.daemon = True  # Important for Streamlit
+        scheduler_thread.start()
+        logger.info("Scheduler started in background thread")
+        return True
+    
+    return False
+
+def stop_scheduler():
+    """Stop the scheduler thread."""
+    global scheduler_running
+    
+    if scheduler_running:
+        scheduler_running = False
+        logger.info("Scheduler stop requested")
+        return True
+    
+    return False
+
+# Initialize session state variables
+def init_session_state():
+    if 'scheduler_status' not in st.session_state:
+        st.session_state.scheduler_status = False
+
+# Main Streamlit app function
+def main():
     st.title("SDE BU News Scraper")
+    
+    # Initialize session state
+    init_session_state()
     
     # Load configuration
     config = get_env_config()
@@ -281,6 +332,32 @@ def streamlit_app():
             check_and_notify()
         st.success("Scraping completed!")
     
+    # Scheduler controls
+    st.header("Scheduler Control")
+    
+    col3, col4 = st.columns(2)
+    
+    with col3:
+        if st.button("Start Scheduler"):
+            if start_scheduler():
+                st.session_state.scheduler_status = True
+                st.success("Scheduler started successfully!")
+            else:
+                st.warning("Scheduler is already running")
+    
+    with col4:
+        if st.button("Stop Scheduler"):
+            if stop_scheduler():
+                st.session_state.scheduler_status = False
+                st.success("Scheduler stopped successfully!")
+            else:
+                st.warning("Scheduler is not running")
+    
+    # Display scheduler status
+    status_color = "green" if st.session_state.scheduler_status else "red"
+    status_text = "Running" if st.session_state.scheduler_status else "Stopped"
+    st.markdown(f"<h4>Scheduler Status: <span style='color:{status_color};'>{status_text}</span></h4>", unsafe_allow_html=True)
+    
     # Display previous data
     st.header("Previous Data")
     previous_data = load_previous_data()
@@ -292,25 +369,10 @@ def streamlit_app():
     else:
         st.info("No news data available")
 
-def schedule_job():
-    """Set up the schedule for the scraper."""
-    config = get_env_config()
-    notification_time = "11:23"
-    
-    logger.info(f"Scheduled daily check at {notification_time}")
-    schedule.every().day.at(notification_time).do(check_and_notify)
-    
-    while True:
-        schedule.run_pending()
-        time.sleep(10)  # Check every 10 seconds
-
+# Start the scheduler automatically when the app loads
 if __name__ == "__main__":
-    import sys
-    
-    # if len(sys.argv) > 1 and sys.argv[1] == "streamlit":
-    #     # This path is used when run via streamlit
-    #     streamlit_app()
-    # else:
-    #     # This path is used when run as a standalone script
-    #     logger.info("Starting scraper service")
-    schedule_job()
+    main()
+    # Auto-start the scheduler when the app loads
+    if not st.session_state.get('scheduler_status', False):
+        start_scheduler()
+        st.session_state.scheduler_status = True
