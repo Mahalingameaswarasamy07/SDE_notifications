@@ -257,7 +257,7 @@ def run_scheduler():
     schedule.every().day.at(notification_time).do(check_and_notify)
     
     # Immediately run a check
-    check_and_notify()
+    # check_and_notify()
     
     while scheduler_running:
         schedule.run_pending()
